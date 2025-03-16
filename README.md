@@ -1,8 +1,10 @@
 ## Feedback Widget--ReactVite
 
+<img width="523" alt="Screenshot 2025-03-16 at 23 26 23" src="https://github.com/user-attachments/assets/15e5f05a-9900-4f4e-8cdc-49812d16203b" /><img width="414" alt="Screenshot 2025-03-16 at 23 26 45" src="https://github.com/user-attachments/assets/2e925293-6c18-4a73-89ce-667d377f64c8" /><img width="456" alt="Screenshot 2025-03-16 at 23 27 10" src="https://github.com/user-attachments/assets/726c1c5c-90f6-4dfc-bda2-7cffe3bfb898" />
+
 This is a feedback widget that can be integrated into various projects. It allows users to submit feedback, including their name, email, message, and rating. The feedback is stored in a Supabase database (PostgreSQL).
 
-**Online Live:**
+**Online Live:** https://widget-arnob.vercel.app/
 
 ## Prerequisites
 
