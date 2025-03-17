@@ -6,7 +6,7 @@ This is a feedback widget that can be integrated into various projects. It allow
 
 **Online Live:** https://widget-arnob.vercel.app/ and integrated on: https://marketing-arnob.netlify.app/
 
-*Note that the feedback widget is integrated on `https://github.com/arnobt78/Marketing--TailwindCSS-Fundamental-Project-2`*
+*Note that the feedback widget is integrated on https://github.com/arnobt78/Marketing--TailwindCSS-Fundamental-Project-2*
 
 ## Prerequisites
 
