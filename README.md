@@ -4,7 +4,9 @@
 
 This is a feedback widget that can be integrated into various projects. It allows users to submit feedback, including their name, email, message, and rating. The feedback is stored in a Supabase database (PostgreSQL).
 
-**Online Live:** https://widget-arnob.vercel.app/
+**Online Live:** https://widget-arnob.vercel.app/ and integrated on: https://marketing-arnob.netlify.app/
+
+*Note that the feedback widget is integrated on `https://github.com/arnobt78/Marketing--TailwindCSS-Fundamental-Project-2`*
 
 ## Prerequisites
 
@@ -89,25 +91,27 @@ npm run build
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Project</title>
+    <title>Marketing Tailwind Templates</title>
   </head>
   <body>
     <div id="root"></div>
-    <!-- Include the widget script -->
-    <script src="path/to/widget.umd.js"></script>
+    <!-- Include the widget script from Vercel -->
+    <script src="https://widget-arnob.vercel.app/widget.umd.js"></script>
     <script>
-      // Define the custom element
-      customElements.define("my-widget", WidgetWebComponent);
-
-      // Use the widget with a dynamic projectId
-      const root = document.getElementById("root");
-      const widgetElement = document.createElement("my-widget");
-      widgetElement.setAttribute("project-id", "4"); // Set the projectId dynamically
-      root.appendChild(widgetElement);
+      // Ensure the widget is added after the main content is loaded
+      window.addEventListener("DOMContentLoaded", (event) => {
+        const root = document.getElementById("root");
+        const widgetElement = document.createElement("my-widget");
+        widgetElement.setAttribute("project-id", "4"); // Set the projectId dynamically
+        document.body.appendChild(widgetElement);
+      });
     </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
 ```
 
 ## Using the Widget
