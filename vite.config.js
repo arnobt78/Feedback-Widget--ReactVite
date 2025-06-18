@@ -32,4 +32,13 @@ export default defineConfig({
     },
     target: "esnext",
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://widget-arnob.vercel.app",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
 });
