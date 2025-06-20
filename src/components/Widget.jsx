@@ -103,10 +103,10 @@ export const Widget = () => {
                       {[...Array(5)].map((_, index) => (
                         <StarIcon
                           key={index}
-                          className={`h-5 w-5 cursor-pointer ${
+                          className={`h-5 w-5 cursor-pointer transition-colors ${
                             rating > index
-                              ? "fill-primary"
-                              : "fill-muted stroke-muted-foreground"
+                              ? "fill-yellow-400 stroke-yellow-400"
+                              : "fill-gray-300 stroke-gray-300"
                           }`}
                           onClick={() => onSelectStar(index)}
                         />
