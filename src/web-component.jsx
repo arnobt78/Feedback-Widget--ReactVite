@@ -54,6 +54,10 @@ class WidgetWebComponent extends HTMLElement {
     for (const { name, value } of this.attributes) {
       props[normalizeAttribute(name)] = value;
     }
+    // If apiBase is not set, default to "/api/feedback"
+    if (!props.apiBase) {
+      props.apiBase = "/api/feedback";
+    }
     return props;
   }
 }

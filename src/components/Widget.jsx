@@ -10,8 +10,9 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import tailwindStyles from "../index.css?inline";
+import PropTypes from "prop-types";
 
-export const Widget = () => {
+export const Widget = ({ apiBase = "/api/feedback" }) => {
   const [rating, setRating] = useState(3);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -29,9 +30,9 @@ export const Widget = () => {
     const name = form.name.value;
     const email = form.email.value;
     const message = form.feedback.value;
-    // POST to local API endpoint
+    // POST to API endpoint (can be overridden by apiBase prop)
     try {
-      const res = await fetch("/api/feedback", {
+      const res = await fetch(apiBase, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, message, rating }),
@@ -128,7 +129,9 @@ export const Widget = () => {
   );
 };
 
-Widget.propTypes = {};
+Widget.propTypes = {
+  apiBase: PropTypes.string,
+};
 
 function StarIcon(props) {
   return (
